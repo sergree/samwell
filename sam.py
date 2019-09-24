@@ -37,6 +37,14 @@ class MyClient(discord.Client):
             return '⚔️'
         if emoji == '⚔️':
             return '⚔'
+        if emoji == '🗡':
+            return '🗡️'
+        if emoji == '🗡️':
+            return '🗡'
+        if emoji == '㊙':
+            return '㊙️'
+        if emoji == '㊙️':
+            return '㊙'
         return emoji
 
     async def load_entities(self):

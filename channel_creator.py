@@ -14,7 +14,7 @@ class VoiceChannelCreator:
     # Опять сложности Emoji
     @staticmethod
     def fix_emoji(emoji):
-        if emoji in ['⚔', '⚔️']:
+        if emoji in ['⚔', '⚔️', '🗡', '🗡️', '㊙️', '㊙']:
             return '🐴'
         return emoji
 
