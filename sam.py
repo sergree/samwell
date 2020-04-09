@@ -69,7 +69,7 @@ class MyClient(discord.Client):
     async def reload_color_roles(self):
         self.color_roles.clear()
         for role in self.main_guild.roles:
-            if hash(role.permissions) == 0:
+            if role.id in config.basic_role_id_order:
                 self.color_roles[role.name.split()[0]] = role
 
     async def prepare_shuffle_roles_message(self):
