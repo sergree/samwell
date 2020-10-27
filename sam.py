@@ -181,5 +181,8 @@ class MyClient(discord.Client):
         await self.channel_creator.handle(member, before, after, client)
 
 
-client = MyClient()
+intents = discord.Intents.default()
+intents.members = True
+intents.presences = True
+client = MyClient(intents=intents)
 client.run(config.token)
