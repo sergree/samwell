@@ -32,7 +32,7 @@ class ReferralPatrol:
             if invite in new_invites:
                 self.invites.remove(invite)
             else:
-                expire_at = invite.created_at + datetime.timedelta(hours=3) + datetime.timedelta(seconds=invite.max_age)
+                expire_at = invite.created_at.replace(tzinfo=None) + datetime.timedelta(hours=3) + datetime.timedelta(seconds=invite.max_age)
                 if datetime.datetime.now() > expire_at:
                     self.invites.remove(invite)
 
